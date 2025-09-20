@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GGV 1.0</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            font-size: clamp(0.5rem, 1rem, 4.5rem);
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #0b1220;
+            color: white;
+        }
+
+        .home {
+            position: absolute;
+            width: 10%;
+            height: 5vh;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            left: 5%;
+            top: 1vh;
+        }
+
+        .home:hover {
+            position: absolute;
+            width: 10%;
+            height: 5vh;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffce08;
+            left: 5%;
+            top: 1vh;
+            cursor: pointer;
+            background-color: black;
+            border-radius: 1vh;
+            border: .5px solid #ffce08;
+        }
+
+        .card {
+            width: 90%;
+            height: 70vh;
+            box-shadow: 5px 5px 20px black;
+            background-image: url(Ap100ae.jpg);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+            gap: 2vh;
+        }
+
+        #text {
+            width: 50%;
+            height: 7vh;
+            position: absolute;
+            top: 5vh;
+            border: 1px solid black;
+            background: rgba(0, 255, 255, 0.282);
+            outline: none;
+            border-radius: 1vh;
+            padding-left: 10px;
+            padding-right: 10px;
+            color: #ffce08;
+            font-size: 1.5rem;
+        }
+
+        #text:focus {
+            background-color: rgba(0, 0, 0, 0.612);
+            border: 1px solid #ffce08;
+        }
+
+        #text::placeholder {
+            color: #ffce08;
+        }
+
+        #spk,
+        #spk1,
+        #spk2 {
+            width: 50%;
+            height: 6vh;
+            border: 1px solid #ffce08;
+            border-radius: 1vh;
+            background-color: black;
+            color: #ffce08;
+            transition: .5s;
+        }
+
+        #spk:hover,
+        #spk1:hover,
+        #spk2:hover {
+            width: 50%;
+            height: 6vh;
+            border: 1px solid #ffce08;
+            border-radius: 1vh;
+            background-color: black;
+            color: #ffce08;
+            cursor: pointer;
+            box-shadow: inset 3px 3px 10px #ffce08, inset -3px -3px 10px #ffce08;
+        }
+
+        @media only screen and (max-width:720px) {
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: sans-serif;
+                font-size: clamp(0.5rem, 1rem, 4.5rem);
+            }
+
+            body {
+                width: 100%;
+                height: 100vh;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                background-color: #0b1220;
+                color: white;
+            }
+
+            .home {
+                position: absolute;
+                width: 25%;
+                height: 5vh;
+                font-size: 1vh;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                left: 5%;
+                top: 1vh;
+            }
+
+            .home:hover {
+                position: absolute;
+                width: 25%;
+                height: 5vh;
+                font-size: 1vh;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                color: #ffce08;
+                background-color: black;
+                border: 1px solid #ffce08;
+                left: 5%;
+                border-radius: 1vh;
+                top: 1vh;
+            }
+
+            .card {
+                width: 90%;
+                height: 70vh;
+                box-shadow: 5px 5px 20px black;
+                background-image: url(Ap100ae.jpg);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                position: relative;
+                gap: 2vh;
+            }
+
+            #text {
+                width: 80%;
+                height: 7vh;
+                position: absolute;
+                top: 5vh;
+                border: 1px solid aqua;
+                background: rgba(0, 255, 255, 0.282);
+                outline: none;
+                border-radius: 1vh;
+                padding-left: 10px;
+                padding-right: 10px;
+                color: #ffce08;
+                font-size: 1.5rem;
+            }
+
+            #text:focus {
+                background-color: rgba(0, 0, 0, 0.612);
+                border: 1px solid #ffce08;
+            }
+
+            #text::placeholder {
+                color: #ffce08;
+            }
+
+            #spk,
+            #spk1,
+            #spk2 {
+                width: 80%;
+                height: 5vh;
+                border: 1px solid #ffce08;
+                border-radius: 1vh;
+                background-color: black;
+                color: #ffce08;
+            }
+
+            #spk:hover,
+            #spk1:hover,
+            #spk2:hover {
+                width: 80%;
+                height: 5vh;
+                border: 1px solid aqua;
+                border-radius: 1vh;
+                background-color: black;
+                color: #ffce08;
+                box-shadow: inset 3px 3px 10px #ffce08, inset -3px -3px 10px #ffce08;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="home">Go to Home Page</div>
+    <div class="card" >
+        <textarea name="text" id="text" onfocus="shad()" onblur="noshad()" placeholder="type your text"></textarea>
+        <button id="spk">Click to Speak</button>
+        <button id="spk1">Speech to text</button>
+        <button id="spk2">Clear Text</button>
+    </div>
+    <script>
+        function shad(){
+            let card = document.querySelector(".card");
+            card.style.boxShadow = "5px 5px 20px #ffce08";
+            card.style.borderRadius = "2vh";
+        }
+        function noshad(){
+            let card = document.querySelector(".card");
+            card.style.boxShadow = "5px 5px 20px black";
+            card.style.borderRadius = "0vh";
+        }
+        document.getElementById("spk").addEventListener("click", () => {
+            let text = document.getElementById("text").value;
+            const spyk = new SpeechSynthesisUtterance(text);
+            spyk.rate = 1;
+            spyk.volume = 1;
+            spyk.pitch = 1;
+            spyk.lang = 'en-GB';
+            window.speechSynthesis.speak(spyk);
+
+        });
+        document.getElementById("spk2").addEventListener("click", () => {
+            let text = document.getElementById("text");
+            text.value = "";
+            text.style.backgroundColor = "rgba(0, 255, 255, 0.282)";
+            text.style.border = "1px solid aqua";
+        });
+
+        document.getElementById("spk1").addEventListener("click", () => {
+            let input = document.getElementById("text");
+            const spyk = new SpeechSynthesisUtterance("I am Listening......");
+            spyk.rate = 1;
+            spyk.volume = 1;
+            spyk.pitch = 1;
+            spyk.lang = 'en-GB';
+            window.speechSynthesis.speak(spyk);
+            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+            if (!SpeechRecognition) {
+                alert("Speech Recognition is not supported in this browser. Use Chrome or Edge.");
+            }
+            else {
+                const reco = new SpeechRecognition();
+                reco.lang = 'en-GB';
+                reco.interimResults = false;
+                reco.pitch = 1;
+                reco.onresult = (event) => {
+                    let transcript = event.results[0][0].transcript;
+                    let text = transcript.toLowerCase().trim();
+                    console.log("User said:", text);
+                    input.value = text;
+                    input.style.backgroundColor = "rgba(0, 0, 0, 0.612)";
+                    input.style.border = "1px solid #ffce08";
+                }
+                setTimeout(() => {
+                    reco.start();
+                    console.log("Listening...");
+                }, 1000);
+            }
+        });
+
+        document.querySelector(".home").addEventListener("click", () => {
+            window.open("index.html", "_self")
+        });
+    </script>
+</body>
+</html>
